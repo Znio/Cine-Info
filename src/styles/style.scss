@@ -122,7 +122,8 @@ select:-webkit-autofill:focus {
     font-weight: 600;
     min-width: 120px;
     border-radius: 3px;
-
+    position: relative;
+    transition: padding 0.4s;
     &.btn-primary {
         background-color: $primary-color;
         border-color: $primary-color;
@@ -146,6 +147,24 @@ select:-webkit-autofill:focus {
             background-color: transparent !important;
             border-color: $primary-color !important;
             box-shadow: none;
+        }
+    }
+
+    .icon {
+        opacity: 0;
+        transition: opacity, right 0.4s;
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:hover {
+        padding-right: 16px;
+
+        .icon {
+            opacity: 1;
+            right: 15px;
         }
     }
 }

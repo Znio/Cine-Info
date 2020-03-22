@@ -195,7 +195,8 @@ class MovieListing extends React.Component {
                                 <Link to={`/movieListing/${searchMovieName}`}>
                                     <Button variant="primary" type="submit" onClick={() => this.fetchSearchMovieList(searchMovieName)}>
                                         Search
-                                        </Button>
+                                        <FontAwesomeIcon className="icon" icon="chevron-right" />
+                                    </Button>
                                 </Link>
                             </Col>
                         </Row>

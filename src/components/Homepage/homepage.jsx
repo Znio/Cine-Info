@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import InfiniteScroll from '../../common/infiniteScroll';
 import { Loader } from '../../common/loader';
 import MovieContainer from '../../common/MovieContainer';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL = process.env.REACT_APP_API_URL;
@@ -110,7 +110,7 @@ class Homepage extends React.Component {
                                 <Col sm={12} md={2}>
                                     <Link to={`/MovieListing/${search}`}>
                                         <Button variant="primary" type="button">
-                                            Submit
+                                            Search <FontAwesomeIcon className="icon" icon="chevron-right" />  
                                         </Button>
                                     </Link>
                                 </Col>
